@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category     :  ModuleBank
+ * @package      :  ModuleBank_JahanpayPayment
+ *
+ * @company      :  ModuleBank
+ * @created by   :  Seyed Hamzeh Fazeli
+ * @contact      :  www.ModuleBank.ir, support@modulebank.ir, 09160666110
+ * @created on   :  15 September 2015
+ * @copyright    :  Copyright (C) 2015. All rights reserved.
+ * @author       :  Seyed Hamzeh Fazeli
+ * @description  :  Jahanpay Gateway Payment for the component (Magento)
+ */
+-->
+<layout version="0.1.0">
+<jahanpay_processing_failure>
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+    </reference>
+    <reference name="content">
+        <block type="jahanpay/failure" name="jahanpay_failure" template="jahanpay/failure.phtml">
+        </block>
+    </reference>
+</jahanpay_processing_failure>
+<jahanpay_processing_redirect>
+    <reference name="root">
+        <action method="setTemplate"><template>jahanpay/blank.phtml</template></action>
+    </reference>
+    <reference name="content">
+        <block type="jahanpay/redirect" name="jahanpay_redirect" template="jahanpay/redirect.phtml" />
+    </reference>
+</jahanpay_processing_redirect>
+</layout>

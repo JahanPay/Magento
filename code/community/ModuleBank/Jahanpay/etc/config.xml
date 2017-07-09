@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category     :  ModuleBank
+ * @package      :  ModuleBank_JahanpayPayment
+ *
+ * @company      :  ModuleBank
+ * @created by   :  Seyed Hamzeh Fazeli
+ * @contact      :  www.ModuleBank.ir, support@modulebank.ir, 09160666110
+ * @created on   :  15 September 2015
+ * @copyright    :  Copyright (C) 2015. All rights reserved.
+ * @author       :  Seyed Hamzeh Fazeli
+ * @description  :  Jahanpay Gateway Payment for the component (Magento)
+ */
+-->
+<config>
+    <modules>
+        <ModuleBank_Jahanpay>
+            <version>1.0.0</version>
+        </ModuleBank_Jahanpay>
+    </modules>
+
+    <global>
+        <models>
+            <jahanpay>
+                <class>ModuleBank_Jahanpay_Model</class>
+            </jahanpay>
+        </models>
+        <helpers>
+            <jahanpay>
+                <class>ModuleBank_Jahanpay_Helper</class>
+            </jahanpay>
+        </helpers>
+        <resources>
+            <jahanpay_setup>
+                <setup>
+                    <module>ModuleBank_Jahanpay</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </jahanpay_setup>
+            <jahanpay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </jahanpay_write>
+            <jahanpay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </jahanpay_read>
+        </resources>
+        <blocks>
+            <jahanpay><class>ModuleBank_Jahanpay_Block</class></jahanpay>
+        </blocks>
+    </global>
+
+    <frontend>
+        <routers>
+            <jahanpay>
+                <use>standard</use>
+                <args>
+                    <module>ModuleBank_Jahanpay</module>
+                    <frontName>jahanpay</frontName>
+                </args>
+            </jahanpay>
+        </routers>
+        <translate>
+            <modules>
+                <ModuleBank_Jahanpay>
+                    <files>
+                        <default>ModuleBank_Jahanpay.csv</default>
+                    </files>
+                </ModuleBank_Jahanpay>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <jahanpay>
+                    <file>jahanpay.xml</file>
+                </jahanpay>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <ModuleBank_Jahanpay>
+                    <files>
+                        <default>ModuleBank_Jahanpay.csv</default>
+                    </files>
+                </ModuleBank_Jahanpay>
+            </modules>
+        </translate>
+    </adminhtml>
+	<phoenix>
+		<jahanpay>
+			<verify_url>http://www.modulebank.ir/</verify_url>
+		</jahanpay>
+	</phoenix>
+    <default>
+        <payment>        
+            <jahanpay>
+                <active>0</active>
+                <model>jahanpay/jahanpay</model>
+                <order_status>1</order_status>
+                <title>درگاه جهان پی</title>
+                <allowspecific>0</allowspecific>
+                <use_store_currency>0</use_store_currency>
+            </jahanpay>
+        </payment>
+    </default> 
+</config>

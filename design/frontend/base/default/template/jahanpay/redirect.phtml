@@ -1,0 +1,31 @@
+<?php 
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category     :  ModuleBank
+ * @package      :  ModuleBank_JahanpayPayment
+ *
+ * @company      :  ModuleBank
+ * @created by   :  Seyed Hamzeh Fazeli
+ * @contact      :  www.ModuleBank.ir, support@modulebank.ir, 09160666110
+ * @created on   :  15 September 2015
+ * @copyright    :  Copyright (C) 2015. All rights reserved.
+ * @author       :  Seyed Hamzeh Fazeli
+ * @description  :  Jahanpay Gateway Payment for the component (Magento)
+ */
+?>
+<style>
+* {font: 12px tahoma;}
+</style>
+<center><b>در حال انتقال به درگاه جهان پی</b><br />لطفا منتظر بمانید</center>
+<?php
+$x = $this->getFormData();
+if (is_array($x))
+{
+	echo $x[1]; }
+else
+{ ?>
+	<br /><br /><center>خطایی در عملیات اتصال به درگاه جهان پی پیش آمده. لطفا این خطا را به مدیریت وب سایت اطلاع دهید<br /><strong><?php echo ($x); ?></strong></center>
+<?php } ?>

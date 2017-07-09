@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category     :  ModuleBank
+ * @package      :  ModuleBank_JahanpayPayment
+ *
+ * @company      :  ModuleBank
+ * @created by   :  Seyed Hamzeh Fazeli
+ * @contact      :  www.ModuleBank.ir, support@modulebank.ir, 09160666110
+ * @created on   :  15 September 2015
+ * @copyright    :  Copyright (C) 2015. All rights reserved.
+ * @author       :  Seyed Hamzeh Fazeli
+ * @description  :  Jahanpay Gateway Payment for the component (Magento)
+ */
+-->
+<config>
+   <sections>
+        <payment>
+            <groups>
+                <jahanpay translate="label comment" module="payment">
+                    <label>درگاه جهان پی</label>
+                    <comment>تمامی حقوق این ماژول متعلق به &lt;strong&gt;&lt;a href="http://www.modulebank.ir/" target="_blank"&gt;مــــــاژول بانک&lt;/a&gt;&lt;/strong&gt; می باشد</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <order_status translate="label">
+                            <label>New order status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </order_status>
+                        <sort_order translate="label">                            
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>                        
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>        
+                        <seller_id translate="label comment">
+                            <label>PIN</label>
+                            <comment>PIN</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_id>                        
+                    </fields>
+                </jahanpay>
+            </groups>
+        </payment>
+    </sections>
+</config>

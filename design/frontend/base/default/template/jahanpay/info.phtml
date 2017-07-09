@@ -1,0 +1,24 @@
+<?php 
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * @category     :  ModuleBank
+ * @package      :  ModuleBank_JahanpayPayment
+ *
+ * @company      :  ModuleBank
+ * @created by   :  Seyed Hamzeh Fazeli
+ * @contact      :  www.ModuleBank.ir, support@modulebank.ir, 09160666110
+ * @created on   :  15 September 2015
+ * @copyright    :  Copyright (C) 2015. All rights reserved.
+ * @author       :  Seyed Hamzeh Fazeli
+ * @description  :  Jahanpay Gateway Payment for the component (Magento)
+ */
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		echo '<em>' . "در حال انتقال به درگاه جهان پی" . '</em>';
+	} else {
+		echo $this->__('شماره تراکنش : %s', $this->htmlEscape($this->getInfo()->getLastTransId())) . '<br/>';
+	}
+?>
